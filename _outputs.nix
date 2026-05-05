@@ -7,6 +7,8 @@ inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } {
       home-manager.useUserPackages = true;
     }
     inputs.stylix.nixosModules.stylix
+    inputs.nixvim.homeModules.nixvim
+    inputs.niri.homeModules.niri
   ];  
     
   systems = import inputs.systems;  

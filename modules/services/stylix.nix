@@ -1,13 +1,12 @@
 # modules/services/stylix.nix  
-{ inputs, lib, ... }:  
+{ pkgs, inputs, lib, config, ... }:
 {  
   flake-file.inputs = {  
     stylix = {
       url = "github:nix-community/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
   };  
-  flake.nixosModule.stylix = { pkgs, config, ... }: {
+  flake.modules.nixos.stylix = {
     options.mySettings.fontSize = lib.mkOption {
       type = lib.types.int;
       default = 12;

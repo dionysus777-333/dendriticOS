@@ -1,5 +1,4 @@
 # modules/home-manager.nix  
-{ inputs, lib, ... }:  
 {  
   flake-file.inputs = {  
     home-manager = {  
