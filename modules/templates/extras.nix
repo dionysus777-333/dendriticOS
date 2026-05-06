@@ -2,6 +2,7 @@
 {
   flake.modules.nixos.extras = {
     modules = with inputs.self.modules.nixos; [
+      flatpak
       spotify
       electrum
       feather
@@ -9,7 +10,6 @@
       libreoffice
       obs
       prismlauncher
-      ungoogled-chromium
       nemo
     ];
     services.flatpak.packages = [

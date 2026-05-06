@@ -2,7 +2,7 @@
   flake-file.inputs = {
     nix-doom-emacs-unstraightened.url = "github:marienz/nix-doom-emacs-unstraightened";
   };
-  flake.home-manager.users.user = {
+  flake.modules.homeManager.demacsu = {
     programs.doom-emacs = {
       enable = true;
       doomDir = ./doom.d;

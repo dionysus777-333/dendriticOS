@@ -1,5 +1,5 @@
 { inputs, ... }: {
-  flake.nixosModules.yir = {
+  flake.modules.nixos.yir = {
     imports = with inputs.self.modules.nixos; [
       global
       headful

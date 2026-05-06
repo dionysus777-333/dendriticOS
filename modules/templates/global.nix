@@ -1,16 +1,11 @@
 { inputs, ... }:
 {
   flake.modules.nixos.global = { pkgs, ... }: {
-    modules = with inputs.self.modules.nixos; [
-      zsh
+    imports = with inputs.self.modules.nixos; [
       git
+      flatpak
     ];
-    home-manager.users.user = {
-      home.username = "user"; 
-      home.homeDirectory = "/home/user";
-      home.stateVersion = "25.11";
-    };
-    environment.systemPackages = with inputs.pkgs; [
+    environment.systemPackages = with pkgs; [
       vim
       wget
       htop
@@ -33,8 +28,28 @@
       isNormalUser = true;
       description = "user";
       shell = pkgs.zsh;
+      ignoreShellProgramCheck = true;
       extraGroups = [ "networkmanager" "wheel" ];
       packages = with pkgs; [];
     };
+    xdg.portal.enable = true;
+    xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    virtualisation.vmVariant = {
+      # following configuration is added only when building VM with build-vm
+      virtualisation = {
+        memorySize = 1024; # Use 1024MiB memory.
+        cores = 2;
+        graphics = true; # Boot the vm in a window.
+        diskSize = 15000; # Virtual machine disk size in MB.
+      };
+    };
+  };
+  flake.modules.homeManager.global = {
+    imports = with inputs.self.modules.homeManager; [
+      zsh
+    ];
+    home.username = "user"; 
+    home.homeDirectory = "/home/user";
+    home.stateVersion = "25.11";
   };
 }

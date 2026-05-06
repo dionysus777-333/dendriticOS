@@ -1,6 +1,5 @@
-{ pkgs, ... }:
 {
-  flake.modules.nixos.zsh = {
+  flake.modules.homeManager.zsh = { pkgs, ... }: {
     programs.zsh = {
       enable = true;
 
@@ -44,10 +43,10 @@
       };
     };
     home.packages = with pkgs; [
-    eza        # better ls
-    bat        # better cat
-    fd         # better find
-    ripgrep    # fast grep
+      eza        # better ls
+      bat        # better cat
+      fd         # better find
+      ripgrep    # fast grep
    ];
   };
 }

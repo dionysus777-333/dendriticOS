@@ -1,10 +1,11 @@
 # modules/services/flatpak.nix
-{ lib, config, ... }:
+{ inputs, ... }:
 {
   flake-file.inputs = { 
-    nix-flatpak.url = "github:gmodena/nix-flatpak";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/";
   };
   flake.modules.nixos.flatpak = {
+    imports = [ inputs.nix-flatpak.nixosModules.nix-flatpak ];
     services.flatpak = {
       enable = true;
       uninstallUnmanaged = true;

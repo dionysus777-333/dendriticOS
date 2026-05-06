@@ -1,14 +1,10 @@
 { inputs, ... }:
 {
-  flake.modules.nixos.baseware = {
-    modules = with inputs.self.modules.nixos; [
-      librewolf
-      nixvim
-      demacsu
-      keepassxc
+  flake.modules.nixos.baseware = { pkgs, ... }: {
+    imports = with inputs.self.modules.nixos; [
       flatpak
     ];
-    environment.systemPackages = with inputs.pkgs; [
+    environment.systemPackages = with pkgs; [
       alsa-utils
       keyutils
       qimgv
@@ -23,6 +19,7 @@
       qdirstat
       piper
       libratbag
+      ungoogled-chromium
     ];
     services.flatpak.packages = [
       "com.github.vikdevelop.photopea_app"
@@ -32,6 +29,14 @@
     xdg.mime.defaultApplications = {
       "application/pdf" = "org.pwmt.zathura.desktop";
     };
+  };
+  flake.modules.homeManager.baseware = {
+    imports = with inputs.self.modules.homeManager; [
+      demacsu
+      keepassxc 
+      nixvim
+      librewolf
+    ];
   };
 }
 

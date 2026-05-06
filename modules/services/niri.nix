@@ -5,9 +5,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  flake.modules.nixos.niri = {
-    home-manager.users.user = {
+  flake.modules.homeManager.niri = {
         
-    };
   };
 }

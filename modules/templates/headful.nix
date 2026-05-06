@@ -1,14 +1,19 @@
 { inputs, ... }:
 {
-  flake.modules.nixos.global = {
-    modules = with inputs.self.modules.nixos; [
-      filetree 
-      stylix
-      niri
-      noctalia-shell
-      foot
-      fastfetch
+  flake.modules.nixos.headful = {
+    imports = with inputs.self.modules.nixos; [
       plymouth
+      home-manager
+    ];
+  };
+  flake.modules.homeManager.headful = {
+    imports = with inputs.self.modules.homeManager; [
+      noctalia
+      niri
+      foot
+      stylix
+      fastfetch
+      filetree
     ];
   };
 }

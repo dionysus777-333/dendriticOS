@@ -1,6 +1,5 @@
-{ lib, pkgs, ... }:
 {
-  flake.modules.nixos.plymouth = {
+  flake.modules.nixos.plymouth = { pkgs, lib, ... }: {
     boot.plymouth = {
       enable = true;
       theme = lib.mkForce "bgrt";
