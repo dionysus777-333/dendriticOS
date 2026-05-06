@@ -5,9 +5,10 @@
       filetree 
       stylix
       niri
-      noctalia
+      noctalia-shell
       foot
       fastfetch
+      plymouth
     ];
   };
 }

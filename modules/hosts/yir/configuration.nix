@@ -1,5 +1,5 @@
-{ inputs, ... }: {
-  flake.nixosModules.yirConf = { ... }: {
+{ inputs, lib, ... }: {
+  flake.nixosModules.yirConf = lib.nixosSystem {
     imports = with inputs.self.modules.nixos; [
       global
       headful
@@ -8,5 +8,6 @@
       normalKeyb
     ];
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
+    system.stateVersion = "25.11";
   };
 }
