@@ -20,6 +20,9 @@
       nix-prefetch-github
     ];
     networking.networkmanager.enable = true;
+    services.resolved = {
+      enable = true;
+    };
     nixpkgs.config.allowUnfree = true;
     hardware.bluetooth.enable = true;
     services.power-profiles-daemon.enable = true;
@@ -43,6 +46,8 @@
         diskSize = 15000; # Virtual machine disk size in MB.
       };
     };
+    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+    system.stateVersion = "25.11";
   };
   flake.modules.homeManager.global = {
     imports = with inputs.self.modules.homeManager; [

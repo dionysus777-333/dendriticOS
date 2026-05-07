@@ -1,9 +1,10 @@
 { inputs, ... }:
 {
-  flake.modules.nixos.headful = {
+  flake.modules.nixos.headful = { pkgs, ... }: {
     imports = with inputs.self.modules.nixos; [
       plymouth
       home-manager
+      tuigreet
     ];
   };
   flake.modules.homeManager.headful = {

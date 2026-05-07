@@ -7,7 +7,13 @@
       ./_hardware-configuration.nix
       normalKeyb
     ];
-    nix.settings.experimental-features = [ "nix-command" "flakes" ];
-    system.stateVersion = "25.11";
+    networking.hostName = "37e0b";
+  };
+  flake.modules.homeManager.yir = {
+    imports = with inputs.self.modules.homeManager; [
+      global
+      headful
+      baseware
+    ];
   };
 }
