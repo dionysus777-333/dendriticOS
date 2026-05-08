@@ -6,4 +6,9 @@
       home-manager
     ];
   };
+  flake.modules.homeManager.global = {
+    imports = with inputs.self.modules.homeManager; [
+      zsh
+    ];
+  };
 }

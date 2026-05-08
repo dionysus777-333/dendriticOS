@@ -15,5 +15,6 @@
     {
       home.homeDirectory = "/home/${config.home.username}";
       home.stateVersion = "26.05";
+      imports = with inputs.self.modules.homeManager; [ zsh ];
     };
 }

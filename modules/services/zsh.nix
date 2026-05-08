@@ -3,6 +3,19 @@
     programs.zsh = {
       enable = true;
 
+      oh-my-zsh = {
+        enable = true;
+        plugins = [ "fzf" "git" "bat" ];
+      };
+
+      plugins = [
+        {
+          name = "you-should-use";
+          src = pkgs.zsh-you-should-use;
+          file = "share/zsh/plugins/you-should-use/you-should-use.plugin.zsh";
+        }
+      ];
+      
       enableCompletion = true;
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
@@ -44,9 +57,10 @@
     };
     home.packages = with pkgs; [
       eza        # better ls
-      bat        # better cat
       fd         # better find
       ripgrep    # fast grep
+      bat
+      fzf
    ];
   };
 }
