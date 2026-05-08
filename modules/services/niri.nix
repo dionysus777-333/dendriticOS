@@ -11,7 +11,7 @@
       enable = true;
       settings = {
         binds = {
-          "Mod+Enter".action.spawn = "foot";
+          "Mod+Return".action.spawn = "foot";
           "Mod+W".action.spawn = "librewolf";
           "Mod+Q".action.quit.skip-confirmation = true;
 
