@@ -5,7 +5,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  flake.modules.homeManager.nixvim = { ... }: {
+  flake.modules.homeManager.nixvim = { inputs, ... }: {
+    imports = [ inputs.nixvim.homeModules.nixvim ];
     programs.nixvim = {
       enable = true;
 

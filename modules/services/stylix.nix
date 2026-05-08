@@ -6,7 +6,8 @@
       url = "github:nix-community/stylix";
     };
   };  
-  flake.modules.homeManager.stylix = {
+  flake.modules.nixos.stylix = {
+    imports = [ inputs.stylix.nixosModules.stylix ];
     options.mySettings.fontSize = lib.mkOption {
       type = lib.types.int;
       default = 12;

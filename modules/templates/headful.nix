@@ -5,6 +5,7 @@
       plymouth
       home-manager
       tuigreet
+      stylix
     ];
   };
   flake.modules.homeManager.headful = {
@@ -12,7 +13,6 @@
       noctalia
       niri
       foot
-      stylix
       fastfetch
       filetree
     ];
