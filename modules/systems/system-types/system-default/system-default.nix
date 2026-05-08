@@ -49,6 +49,7 @@
         system-minimal
         baseware 
         headful
+        filetree
       ]
       ++ [ inputs.self.modules.generic.systemConstants ];
   };

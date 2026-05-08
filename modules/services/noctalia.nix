@@ -1,13 +1,13 @@
 { inputs, ... }:
 {
   flake-file.inputs = {
-    noctalia-shell = {
+    noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
     };
   };
   flake.modules.homeManager.noctalia = {
+    imports = [ inputs.noctalia.homeModules.default ];
     programs.noctalia-shell = {
-      imports = [ inputs.noctalia.homeModules.default ];
       enable = true;
       settings = {
         bar = {

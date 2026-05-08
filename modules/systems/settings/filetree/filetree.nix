@@ -6,9 +6,11 @@
       documents = "$HOME/Documents";
       download = "$HOME/Downloads";
       music = "$HOME/Music";
-      screenshots = "$HOME/Pictures/Screenshots";
       videos = "$HOME/Videos";
       desktop = "$HOME/Desktop"; # You can disable folders you don't want
+      extraConfig = {
+        SCREENSHOTS = "$HOME/Pictures/Screenshots";
+      };
     };
   };
 }

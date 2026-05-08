@@ -14,7 +14,6 @@
       niri
       foot
       fastfetch
-      filetree
     ];
   };
 }

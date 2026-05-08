@@ -22,7 +22,7 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    noctalia-shell.url = "github:noctalia-dev/noctalia-shell";
+    noctalia.url = "github:noctalia-dev/noctalia-shell";
     stylix.url = "github:nix-community/stylix";
   };
 }
