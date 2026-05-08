@@ -9,7 +9,7 @@
     { pkgs, ... }:
     {
       # Module Imports
-      imports = inputs.self.modules.nixos.global;
+      imports = [ inputs.self.modules.nixos.global ];
       # System Packages
       environment.systemPackages = with pkgs; [
         vim
