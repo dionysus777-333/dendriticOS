@@ -22,6 +22,7 @@ in
         { pkgs, ... }:
         {
           imports = with self.modules.homeManager; [
+            system-default
           ];
           home.packages = with pkgs; [
           ];
