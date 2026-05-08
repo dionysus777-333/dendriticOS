@@ -1,3 +1,4 @@
+{ inputs, ... }:
 {
   flake-file.inputs = {
     nixvim = {
@@ -5,7 +6,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  flake.modules.homeManager.nixvim = { inputs, ... }: {
+  flake.modules.homeManager.nixvim = { ... }: {
     imports = [ inputs.nixvim.homeModules.nixvim ];
     programs.nixvim = {
       enable = true;

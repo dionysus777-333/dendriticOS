@@ -1,7 +1,7 @@
 { inputs, ... }:
 {
   flake.modules.nixos.language = { pkgs, ... }: {
-    modules = with inputs.self.modules.nixos; [
+    imports = with inputs.self.modules.nixos; [
       anki
       fcitx5
     ];

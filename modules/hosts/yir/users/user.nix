@@ -4,11 +4,11 @@
   ...
 }:
 {
-  flake.modules.nixos.linux-desktop =
+  flake.modules.nixos.yir =
     { config, ... }:
     {
-      home-manager.users.user = {
-        ###
-      };
+      imports = [
+        self.modules.nixos.user 
+      ];
     };
 }

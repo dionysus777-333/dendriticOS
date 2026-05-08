@@ -1,7 +1,7 @@
 { inputs, ... }:
 {
   flake.modules.nixos.extras = {
-    modules = with inputs.self.modules.nixos; [
+    imports = with inputs.self.modules.nixos; [
       flatpak
       spotify
       electrum
