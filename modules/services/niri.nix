@@ -29,8 +29,9 @@
           "Mod+Return".action.spawn = "foot";
           "Mod+W".action.spawn = "librewolf";
           "Mod+Q".action.close-window = [];
-          "Mod+D".action."spawn-sh" = [ "noctalia-shell ipc call lockScreen lock" ];
-          "Mod+Space".action."spawn-sh" = [ "noctalia-shell ipc call launcher toggle" ];
+          "Mod+D".action.spawn-sh = [ "noctalia-shell ipc call lockScreen lock" ];
+          "Mod+Space".action.spawn-sh = [ "noctalia-shell ipc call launcher toggle" ];
+          "Mod+M".action.maximize-column = [];
         };
         spawn-at-startup = [
           {
