@@ -30,6 +30,8 @@
       };
 
       plugins = {
+        web-devicons.enable = true;
+        
         # UI & Navigation
         lualine.enable = true;
         neo-tree.enable = true;

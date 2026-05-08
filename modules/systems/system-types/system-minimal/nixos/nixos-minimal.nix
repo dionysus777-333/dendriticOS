@@ -31,7 +31,7 @@
       services.resolved.enable = true;
       
       nixpkgs.config.allowUnfree = true;
-      system.stateVersion = "25.11";
+      system.stateVersion = "26.05";
 
       i18n.defaultLocale = "en_US.UTF-8";
       time.timeZone = "America/Los_Angeles";
