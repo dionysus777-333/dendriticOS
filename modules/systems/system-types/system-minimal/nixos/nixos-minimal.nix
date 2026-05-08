@@ -29,6 +29,7 @@
       # Networking
       networking.networkmanager.enable = true;
       services.resolved.enable = true;
+      networking.firewall.enable = true;
       
       nixpkgs.config.allowUnfree = true;
       system.stateVersion = "26.05";

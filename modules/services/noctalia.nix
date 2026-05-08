@@ -36,12 +36,12 @@
             ];
             right = [
               {
-                alwaysShowPercentage = false;
+                alwaysShowPercentage = true;
                 id = "Battery";
-                warningThreshold = 30;
+                warningThreshold = 15;
               }
               {
-                formatHorizontal = "HH:mm";
+                formatHorizontal = "HH:mm:ss";
                 formatVertical = "HH mm";
                 id = "Clock";
                 useMonospacedFont = true;
