@@ -17,6 +17,7 @@
       xcbutilwm
       libinput
     ];
+    security.pam.services.swaylock = {};
     programs.xwayland.enable = true;
     services.xserver.enable = true;
     services.libinput.enable = true;
@@ -26,10 +27,14 @@
   };
   flake.modules.homeManager.headful = {
     imports = with inputs.self.modules.homeManager; [
-      noctalia
-      niri
+      # noctalia
+      # niri
       foot
       fastfetch
+      swaylock
+      waybar
+      fuzzel
+      river
     ];
   };
 }
