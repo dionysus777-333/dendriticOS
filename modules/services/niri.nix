@@ -10,6 +10,12 @@
     programs.niri = {
       enable = true;
       settings = {
+        layout = {
+          gaps = 4;
+          focus-ring = {
+            width = 2;
+          };
+        };
         input = {
           touchpad = {
             tap = true;
