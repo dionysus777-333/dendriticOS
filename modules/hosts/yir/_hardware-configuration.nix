@@ -10,10 +10,6 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.initrd.systemd.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
   systemd.tmpfiles.rules = [
     "d /mnt 0755 root root -"
     "d /mnt/usb 0755 root root -"

@@ -30,10 +30,18 @@
       networking.networkmanager.enable = true;
       services.resolved.enable = true;
       networking.firewall.enable = true;
-      
+
+      # Software
+      hardware.enableRedistributableFirmware = true;
       nixpkgs.config.allowUnfree = true;
       system.stateVersion = "26.05";
 
+      # Boot
+      boot.loader.systemd-boot.enable = true;
+      boot.initrd.systemd.enable = true;
+      boot.loader.efi.canTouchEfiVariables = true;
+
+      # Locale
       i18n.defaultLocale = "en_US.UTF-8";
       time.timeZone = "America/Los_Angeles";
       
