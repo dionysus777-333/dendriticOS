@@ -135,8 +135,9 @@
         # Startup
         spawn = [
           "waybar"
-          "'foot --hold fastfetch'"
+          "foot bash -c 'fastfetch; exec $SHELL'"
           "'rivertile -view-padding 6 -outer-padding 6'"
+          "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP && systemctl --user start graphical-session.target"
         ];
 
         # Mouse

@@ -42,6 +42,7 @@
             interval = 5;
             format = " {}%";
             # max-length = 10;
+            on-click = "foot -e btop";
           };
 
           "cpu" = {
@@ -73,7 +74,7 @@
             tooltip-format-wifi = "{icon} {essid}\n⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}";
             tooltip-format-ethernet = "󰀂 {ifname}\n⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}";
             tooltip-format-disconnected = "Disconnected";
-            on-click = "foot -e nmtui";
+            on-click-right = "foot -e nmtui";
             # on-click-right = "~/.config/rofi/wifi/wifinew.sh &";
             interval = 5;
           };
@@ -94,6 +95,7 @@
           "custom/logo" = {
             format = "  ";
             tooltip = false;
+            on-click = "wlogout";
             # on-click = "~/.config/rofi/launchers/misc/launcher.sh &";
           };
 
