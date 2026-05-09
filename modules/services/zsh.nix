@@ -5,7 +5,7 @@
 
       oh-my-zsh = {
         enable = true;
-        plugins = [ "fzf" "git" "bat" ];
+        plugins = [ "fzf" "git" ];
       };
 
       plugins = [

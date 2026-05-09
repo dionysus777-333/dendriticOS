@@ -36,6 +36,12 @@
             ];
             right = [
               {
+                id = "Volume";
+              }
+              {
+                id = "Tray";
+              }
+              {
                 alwaysShowPercentage = true;
                 id = "Battery";
                 warningThreshold = 15;
@@ -48,6 +54,9 @@
                 usePrimaryColor = true;
               }
             ];
+          };
+          wallpaper = {
+            enabled = false;
           };
         };
       };

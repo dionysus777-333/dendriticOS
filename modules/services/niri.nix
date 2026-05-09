@@ -93,6 +93,17 @@
             ];
           }
         ];
+        window-rules = [
+          {
+            geometry-corner-radius = {
+              bottom-left = 20.0;
+              bottom-right = 20.0;
+              top-left = 20.0;
+              top-right = 20.0;
+            };
+            clip-to-geometry = true;
+          }
+        ];
       };
     };        
   };

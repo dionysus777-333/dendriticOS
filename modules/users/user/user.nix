@@ -14,7 +14,6 @@ in
           # developmentEnvironment
         ];
         users.users.${user} = {
-          group = "audio";
         };
       };
 
