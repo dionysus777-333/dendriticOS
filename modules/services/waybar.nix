@@ -13,7 +13,8 @@
           ];
           
           modules-center = [
-            "river/tags"
+            # "river/tags"
+            "hyprland/workspaces"
           ];
           
           modules-right = [
@@ -27,11 +28,11 @@
             # "custom/power"
           ];
 
-          "river/tags" = {
-            num-tags = 9;
-            hide-vacant = true;
-            disable-click = true;
-          };
+          # "river/tags" = {
+          #   num-tags = 9;
+          #   hide-vacant = true;
+          #   disable-click = true;
+          # };
 
           # "river/window" = {
           #   format = "{}";
@@ -95,7 +96,7 @@
           "custom/logo" = {
             format = "  ";
             tooltip = false;
-            on-click = "wlogout";
+            on-click = "nwg-bar";
             # on-click = "~/.config/rofi/launchers/misc/launcher.sh &";
           };
 

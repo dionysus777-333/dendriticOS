@@ -1,7 +1,29 @@
 {
-  flake.modules.homeManager.wlogout = {
+  flake.modules.homeManager.wlogout = { config, pkgs, ... }: {
     programs.wlogout = {
       enable = true;
+      style = with config.lib.stylix.colors.withHashtag; 
+        ''
+          #shutdown {
+            background-image: image(url("${pkgs.wlogout}/share/wlogout/icons/shutdown.png"));
+          }
+          #reboot {
+            background-image: image(url("${pkgs.wlogout}/share/wlogout/icons/reboot.png"));
+          }
+          * {
+            font-family: "${config.stylix.fonts.sansSerif.name}";
+            transition: 20ms;
+          }
+          window {
+            background-color: alpha(#{base00}, 0.5);
+          }
+          button {
+            color: transparent;
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+          }
+        '';
       layout = [
         {
           label = "lock";

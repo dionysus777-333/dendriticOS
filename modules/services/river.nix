@@ -1,6 +1,7 @@
-{ inputs, ... }:
+{ ... }:
 {
-  flake.modules.homeManager.river = {
+  flake.modules.homeManager.river = { pkgs, ... }: {
+    home.packages = [ pkgs.wideriver ];
     wayland.windowManager.river = {
       enable = true;
       xwayland.enable = true;
@@ -12,7 +13,7 @@
           "normal"
           "passthrough"
         ];
-        default-layout = "rivertile";
+        default-layout = "wideriver";
         set-repeat = "50 300";
 
         # Inputs
@@ -57,16 +58,16 @@
             "Super equal" = "resize horizontal 100";
             "Super+Shift equal" = "resize vertical 100";
             "Super+Shift minus" = "resize vertical -100";
-            "Super bracketleft" = "send-layout-cmd rivertile 'main-ratio -0.05'";
-            "Super bracketright" = "send-layout-cmd rivertile 'main-ratio +0.05'";
-            # "Super+Shift" = "send-layout-cmd rivertile 'main-count +1'";
-            # "Super+Shift" = "send-layout-cmd rivertile 'main-count -1'";
+            "Super bracketleft" = "send-layout-cmd wideriver '--ratio -0.05'";
+            "Super bracketright" = "send-layout-cmd wideriver '--ratio +0.05'";
+            # "Super+Shift" = "send-layout-cmd wideriver 'main-count +1'";
+            # "Super+Shift" = "send-layout-cmd wideriver 'main-count -1'";
             
             # Layout Orientation
-            "Super Up"    = "send-layout-cmd rivertile 'main-location top'";
-            "Super Right" = "send-layout-cmd rivertile 'main-location right'";
-            "Super Down"  = "send-layout-cmd rivertile 'main-location bottom'";
-            "Super Left"  = "send-layout-cmd rivertile 'main-location left'";
+            # "Super Up"    = "send-layout-cmd wideriver 'main-location top'";
+            "Super Right" = "send-layout-cmd wideriver '--layout right'";
+            # "Super Down"  = "send-layout-cmd wideriver 'main-location bottom'";
+            "Super Left"  = "send-layout-cmd wideriver '--layout left'";
 
             # Window Management
             "Super+Alt H" = "move left 100";
@@ -86,6 +87,7 @@
 
             "Super V" = "toggle-float";
             "Super F" = "toggle-fullscreen";
+            "Super tab" = "send-layout-cmd wideriver '--layout-toggle'";
             
             # Mode Toggles
             "Super F11" = "enter-mode passthrough";
@@ -127,6 +129,7 @@
             "None XF86MonBrightnessDown" = "spawn 'light -U 5'";
           };
         };
+
         # Rules
         rule-add = {
         };
@@ -135,13 +138,26 @@
         # Startup
         spawn = [
           "waybar"
-          "foot bash -c 'fastfetch; exec $SHELL'"
-          "'rivertile -view-padding 6 -outer-padding 6'"
+          "wideriver"
           "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP && systemctl --user start graphical-session.target"
+          "foot bash -c 'fastfetch; exec $SHELL'"
         ];
 
         # Mouse
         focus-follows-cursor = "always";
+        map-pointer = {
+          normal = {
+            "Super Button1" = "move-view";
+            "Super Button2" = "resize-view";
+          };
+        };
+
+        # Looks
+        # view-padding = 3;
+        # outer-padding = 1;
+        inner-gap = 3;
+        outer-gap = 3;
+        og-top = 0;
       };
     };
   };

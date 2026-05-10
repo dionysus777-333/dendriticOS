@@ -4,7 +4,7 @@
       enable = true;
       settings = {
         main = {
-          # pad = "10x10";
+          pad = "3x3";
         };
         # csd = {
         #   preferred = "none";

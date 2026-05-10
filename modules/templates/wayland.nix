@@ -3,9 +3,11 @@
   flake.modules.nixos.wayland = { pkgs, ... }: {
     imports = with inputs.self.modules.nixos; [
       tuigreet
+      nwg-bar
     ];
     environment.systemPackages = with pkgs; [
       qt6.qtwayland
+      grimblast
     ];
     programs.xwayland.enable = true;
     environment.sessionVariables = {
@@ -19,7 +21,9 @@
       swaylock
       waybar
       fuzzel
-      river
+      hyprland
+      # river
+      # wlogout
       # noctalia
       # niri
     ] ;
