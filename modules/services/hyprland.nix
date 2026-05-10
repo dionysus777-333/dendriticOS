@@ -62,7 +62,7 @@
             "$mod, code:25, exec, $browser"                  # W
             "$mod, code:36, exec, $terminal"                 # RETURN
             "$mod SHIFT, code:39, exec, grimblast copy area" # S
-            "$mod SHIFT, code:46, exec, swaylock"            # L
+            "$mod SHIFT, code:40, exec, swaylock"            # L
             "$mod, code:65, exec, $menu"                     # SPACE
 
             # Nav
