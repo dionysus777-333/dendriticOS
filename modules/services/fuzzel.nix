@@ -6,6 +6,7 @@
         main = {
           terminal = "${pkgs.foot}/bin/foot";
           layer = "overlay";
+          border-radius = 0;
         };
       };
     };

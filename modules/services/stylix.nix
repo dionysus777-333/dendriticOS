@@ -28,12 +28,17 @@
             package = pkgs.noto-fonts-color-emoji;
             name = "Noto Color Emoji";
           };
-        # sizes = {
-        #    applications = config.mySettings.fontSize;
-        #    terminal = config.mySettings.fontSize;
-        #    desktop = config.mySettings.fontSize;
-        #    popups = config.mySettings.fontSize;
-        # };
+        sizes = {
+           applications = 12;
+           terminal = 11;
+           desktop = 10;
+           popups = 12; 
+        };
+      };
+      cursor = {
+        package = pkgs.vanilla-dmz;
+        name = "Vanilla-DMZ"; # Use "Vanilla-DMZ-AA" for the black version
+        size = 24; 
       };
     };
   };

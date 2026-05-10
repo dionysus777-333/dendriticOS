@@ -23,6 +23,7 @@
         ];
 
         input = {
+          accel_profile="flat";
           repeat_delay = 300; 
           repeat_rate = 50;
           touchpad = {

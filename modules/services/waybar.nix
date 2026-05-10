@@ -2,6 +2,12 @@
   flake.modules.homeManager.waybar = {
     programs.waybar = {
       enable = true;
+      style = 
+        ''
+          #workspaces button {
+            border-radius: 0;
+          }
+        '';
       settings = {
         mainBar = {
           layer = "top";
@@ -43,7 +49,7 @@
             interval = 5;
             format = " {}%";
             # max-length = 10;
-            on-click = "foot -e btop";
+            on-click = "foot -e htop";
           };
 
           "cpu" = {
@@ -53,7 +59,7 @@
               warning = 70;
               critical = 90;
             };
-            on-click = "foot -e btop";
+            on-click = "foot -e htop";
           };
 
           "tray" = {
