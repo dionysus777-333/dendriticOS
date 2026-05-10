@@ -17,6 +17,11 @@
           file = "share/zsh/plugins/you-should-use/you-should-use.plugin.zsh";
         }
       ];
+
+      initContent = ''
+        autoload -U promptinit; promptinit
+        prompt pure
+      '';
       
       enableCompletion = true;
       autosuggestion.enable = true;
@@ -62,6 +67,7 @@
       fd         # better find
       ripgrep    # fast grep
       fzf
+      pure-prompt
    ];
   };
 }
