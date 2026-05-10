@@ -3,7 +3,6 @@
   flake.modules.nixos.wayland = { pkgs, ... }: {
     imports = with inputs.self.modules.nixos; [
       tuigreet
-      nwg-bar
     ];
     environment.systemPackages = with pkgs; [
       qt6.qtwayland

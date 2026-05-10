@@ -31,7 +31,7 @@
             "wireplumber"
             "battery"
             "clock"
-            # "custom/power"
+            "custom/power"
           ];
 
           # "river/tags" = {
@@ -100,10 +100,9 @@
           };
 
           "custom/logo" = {
-            format = "  ";
+            format = " ";
             tooltip = false;
-            on-click = "nwg-bar";
-            # on-click = "~/.config/rofi/launchers/misc/launcher.sh &";
+            on-click = "fuzzel";
           };
 
           "battery" = {
@@ -124,6 +123,7 @@
           "custom/power" = {
             format = "󰤆 ";
             tooltip = false;
+            on-click = "bash -c 'SELECTION=$(printf \"1 - Lock\\n2 - Suspend\\n3 - Log out\\n4 - Reboot\\n5 - Reboot to UEFI\\n6 - Hard reboot\\n7 - Shutdown\" | fuzzel --dmenu -l 7 -p \"Power Menu: \"); case $SELECTION in *\"Lock\") swaylock;; *\"Suspend\") systemctl suspend;; *\"Log out\") swaymsg exit;; *\"Reboot\") systemctl reboot;; *\"Reboot to UEFI\") systemctl reboot --firmware-setup;; *\"Hard reboot\") pkexec sh -c \"echo b > /proc/sysrq-trigger\";; *\"Shutdown\") systemctl poweroff;; esac'";
             # on-click = "~/.config/rofi/powermenu/type-2/powermenu.sh &";
           };
         };
