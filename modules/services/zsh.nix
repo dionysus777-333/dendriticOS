@@ -1,5 +1,7 @@
+{ inputs, ... }:
 {
   flake.modules.homeManager.zsh = { pkgs, ... }: {
+    imports = with inputs.self.modules.homeManager; [ bat ];
     programs.zsh = {
       enable = true;
 
@@ -59,7 +61,6 @@
       eza        # better ls
       fd         # better find
       ripgrep    # fast grep
-      bat
       fzf
    ];
   };

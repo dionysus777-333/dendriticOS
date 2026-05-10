@@ -1,1 +1,1 @@
-bat and emacs rice
+emacs rice
