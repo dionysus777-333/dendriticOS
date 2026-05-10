@@ -19,10 +19,14 @@
     services.xserver.enable = true;
     services.libinput.enable = true;
   };
-  flake.modules.homeManager.headful = {
+  flake.modules.homeManager.headful = { pkgs, ... }: {
     imports = with inputs.self.modules.homeManager; [
       fastfetch
       wayland
     ];
+    # home.pointerCursor = {
+    #   gtk.enable = true;
+    #   x11.enable = true;
+    # };
   };
 }

@@ -11,6 +11,13 @@
         "$menu" = "fuzzel";
         "$browser" = "librewolf";
 
+        # env = [
+        #   "XCURSOR_THEME,Vanilla-DMZ"
+        #   "XCURSOR_SIZE,24"
+        #   "HYPRCURSOR_THEME,Vanilla-DMZ"
+        #   "HYPRCURSOR_SIZE,24"
+        # ];
+
         decoration = {
           rounding = 0;
           shadow = { enabled = false; };
