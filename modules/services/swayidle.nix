@@ -2,24 +2,25 @@
   flake.modules.homeManager.swayidle = { pkgs, ... }: {
     services.swayidle = {
       enable = true;
-      systemdTarget = "graphical-session.target";
       timeouts = [
         {
-          timeout = 300; # 5 minutes
-          command = "${pkgs.swaylock-effects}/bin/swaylock";
+          timeout = 300;
+          command = "${pkgs.hyprland}/bin/hyprctl dispatch dpms off";
+          resumeCommand = "${pkgs.hyprland}/bin/hyprctl dispatch dpms on";
         }
         {
           timeout = 600;
-          # Turns off all monitors via wlr-randr
-          command = "${pkgs.wlr-randr}/bin/wlr-randr --off";
-          # Restores all monitors on activity resume
-          resumeCommand = "${pkgs.wlr-randr}/bin/wlr-randr --on";
+          command = "${pkgs.systemd}/bin/systemctl suspend";
         }
       ];
       events = [
         {
           event = "before-sleep";
-          command = "${pkgs.swaylock-effects}/bin/swaylock";
+          command = "${pkgs.swaylock}/bin/swaylock";
+        }
+        {
+          event = "lock";
+          command = "${pkgs.swaylock}/bin/swaylock";
         }
       ];
     };
