@@ -120,6 +120,7 @@
         exec-once = [
           "foot -e sh -c 'fastfetch; $SHELL'"
           "waybar &"
+          "swayidle -w"
         ];
       };
     };
