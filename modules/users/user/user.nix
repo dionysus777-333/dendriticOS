@@ -14,6 +14,7 @@ in
           # developmentEnvironment
         ];
         users.users.${user} = {
+          extraGroups = [ "networkmanager" ];
         };
       };
 
