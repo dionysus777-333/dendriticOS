@@ -123,7 +123,7 @@
           "custom/power" = {
             format = "󰤆 ";
             tooltip = false;
-            on-click = "bash -c 'SELECTION=$(printf \"1 - Lock\\n2 - Suspend\\n3 - Log out\\n4 - Reboot\\n5 - Reboot to UEFI\\n6 - Hard reboot\\n7 - Shutdown\" | fuzzel --dmenu -l 7 -p \"Power Menu: \"); case $SELECTION in *\"Lock\") hyprlock;; *\"Suspend\") systemctl suspend;; *\"Log out\")  hyprctl dispatch exit;; *\"Reboot\") systemctl reboot;; *\"Reboot to UEFI\") systemctl reboot --firmware-setup;; *\"Hard reboot\") pkexec sh -c \"echo b > /proc/sysrq-trigger\";; *\"Shutdown\") systemctl poweroff;; esac'";
+            on-click = "bash -c 'SELECTION=$(printf \"1 - Lock\\n2 - Suspend\\n3 - Log out\\n4 - Reboot\\n5 - Reboot to UEFI\\n6 - Hard reboot\\n7 - Shutdown\" | fuzzel --dmenu -l 7 -p \"Power Menu: \"); case $SELECTION in *\"Lock\") loginctl lock-session;; *\"Suspend\") loginctl lock-session && systemctl suspend;; *\"Log out\")  hyprctl dispatch exit;; *\"Reboot\") systemctl reboot;; *\"Reboot to UEFI\") systemctl reboot --firmware-setup;; *\"Hard reboot\") pkexec sh -c \"echo b > /proc/sysrq-trigger\";; *\"Shutdown\") systemctl poweroff;; esac'";
             # on-click = "~/.config/rofi/powermenu/type-2/powermenu.sh &";
           };
         };
