@@ -49,7 +49,7 @@
             interval = 5;
             format = " {}%";
             # max-length = 10;
-            on-click = "foot -e htop";
+            on-click = "foot -e btop";
           };
 
           "cpu" = {
@@ -59,7 +59,7 @@
               warning = 70;
               critical = 90;
             };
-            on-click = "foot -e htop";
+            on-click = "foot -e btop";
           };
 
           "tray" = {

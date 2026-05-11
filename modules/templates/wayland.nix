@@ -23,6 +23,7 @@
       waybar
       fuzzel
       hyprland
+      btop
       # river
       # wlogout
       # noctalia
