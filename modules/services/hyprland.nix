@@ -22,6 +22,8 @@
           rounding = 0;
           shadow = { enabled = false; };
           blur = { enabled = false; };
+          dim_inactive = true;
+          dim_strength = 0.2;
         };
         animations = { enabled = false; };
 
