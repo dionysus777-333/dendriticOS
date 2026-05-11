@@ -93,7 +93,7 @@
             "$mod, W, exec, $browser"
             "$mod, RETURN, exec, $terminal"
             "$mod SHIFT, s, exec, grimblast copy area"
-            "$mod SHIFT, l, exec, swaylock"
+            "$mod SHIFT, d, exec, loginctl lock-session"
             "$mod, SPACE, exec, $menu"
 
             # Nav
