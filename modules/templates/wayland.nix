@@ -17,7 +17,9 @@
   flake.modules.homeManager.wayland = {
     imports = with inputs.self.modules.homeManager; [
       foot
-      swaylock
+      # swaylock
+      hyprlock
+      hypridle
       waybar
       fuzzel
       hyprland
