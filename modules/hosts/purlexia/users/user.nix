@@ -3,7 +3,7 @@
   ...
 }:
 {
-  flake.modules.nixos.yir =
+  flake.modules.nixos.purlexia =
     { config, ... }:
     {
       imports = [
@@ -11,3 +11,4 @@
       ];
     };
 }
+

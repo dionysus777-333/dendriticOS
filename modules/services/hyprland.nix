@@ -1,5 +1,6 @@
 {
-  flake.modules.homeManager.hyprland = {
+  flake.modules.homeManager.hyprland = { pkgs, ... }: {
+    home.packages = with pkgs; [ brightnessctl ];
     wayland.windowManager.hyprland = {
       enable = true;
       xwayland.enable = true;
@@ -36,7 +37,7 @@
           repeat_delay = 300; 
           repeat_rate = 50;
           touchpad = {
-            natural_scroll = true;
+            natural_scroll = false;
           };
         };
         gestures = {
