@@ -76,8 +76,8 @@
             # Nav
             "$mod, code:43, movefocus, l"                    # H
             "$mod, code:46, movefocus, r"                    # L
-            "$mod, code:44, movefocus, u"                    # J
-            "$mod, code:45, movefocus, d"                    # K
+            "$mod, code:44, movefocus, d"                    # J
+            "$mod, code:45, movefocus, u"                    # K
             "$mod, code:41, fullscreen, 0"                   # F
 
             # Windows
