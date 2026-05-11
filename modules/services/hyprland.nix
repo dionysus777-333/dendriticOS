@@ -66,49 +66,50 @@
         bind =
           [
             # Spawns
-            "$mod, code:24, killactive"                     # Q
-            "$mod, code:25, exec, $browser"                  # W
-            "$mod, code:36, exec, $terminal"                 # RETURN
-            "$mod SHIFT, code:39, exec, grimblast copy area" # S
-            "$mod SHIFT, code:40, exec, loginctl lock-session"            # L
-            "$mod, code:65, exec, $menu"                     # SPACE
-
-            # Nav
-            "$mod, code:43, movefocus, l"                    # H
-            "$mod, code:46, movefocus, r"                    # L
-            "$mod, code:44, movefocus, d"                    # J
-            "$mod, code:45, movefocus, u"                    # K
-            "$mod, code:41, fullscreen, 0"                   # F
-
-            # Windows
-            "$mod, code:55, togglefloating"                  # V
-            "$mod SHIFT, code:43, movewindow, l"             # H
-            "$mod SHIFT, code:46, movewindow, r"             # L
-            "$mod SHIFT, code:45, movewindow, u"             # K
-            "$mod SHIFT, code:44, movewindow, d"             # J
-            "$mod, code:58, fullscreen, 1"                   # M
-            # Spawns
-            # "$mod, Q, killactive,"
-            # "$mod, W, exec, $browser"
-            # "$mod, RETURN, exec, $terminal"
-            # "$mod SHIFT, s, exec, grimblast copy area"
-            # "$mod SHIFT, l, exec, swaylock"
-            # "$mod, SPACE, exec, $menu"
+            # "$mod, code:24, killactive"                     # Q
+            # "$mod, code:25, exec, $browser"                  # W
+            # "$mod, code:36, exec, $terminal"                 # RETURN
+            # "$mod SHIFT, code:39, exec, grimblast copy area" # S
+            # "$mod SHIFT, code:40, exec, loginctl lock-session"            # L
+            # "$mod, code:65, exec, $menu"                     # SPACE
 
             # # Nav
-            # "$mod, H, movefocus, l"
-            # "$mod, L, movefocus, r"
-            # "$mod, J, movefocus, u"
-            # "$mod, K, movefocus, d"
-            # "$mod, F, fullscreen, 0"
+            # "$mod, code:43, movefocus, l"                    # H
+            # "$mod, code:46, movefocus, r"                    # L
+            # "$mod, code:44, movefocus, d"                    # J
+            # "$mod, code:45, movefocus, u"                    # K
+            # "$mod, code:41, fullscreen, 0"                   # F
 
             # # Windows
-            # "$mod, V, togglefloating,"
-            # "$mod SHIFT, H, movewindow, l"
-            # "$mod SHIFT, L, movewindow, r"
-            # "$mod SHIFT, K, movewindow, u"
-            # "$mod SHIFT, J, movewindow, d"
-            # "$mod, M, fullscreen, 1"
+            # "$mod, code:55, togglefloating"                  # V
+            # "$mod SHIFT, code:43, movewindow, l"             # H
+            # "$mod SHIFT, code:46, movewindow, r"             # L
+            # "$mod SHIFT, code:45, movewindow, u"             # K
+            # "$mod SHIFT, code:44, movewindow, d"             # J
+            # "$mod, code:58, fullscreen, 1"                   # M
+
+            # Spawns
+            "$mod, Q, killactive,"
+            "$mod, W, exec, $browser"
+            "$mod, RETURN, exec, $terminal"
+            "$mod SHIFT, s, exec, grimblast copy area"
+            "$mod SHIFT, l, exec, swaylock"
+            "$mod, SPACE, exec, $menu"
+
+            # Nav
+            "$mod, H, movefocus, l"
+            "$mod, L, movefocus, r"
+            "$mod, J, movefocus, d"
+            "$mod, K, movefocus, u"
+            "$mod, F, fullscreen, 0"
+
+            # Windows
+            "$mod, V, togglefloating,"
+            "$mod SHIFT, H, movewindow, l"
+            "$mod SHIFT, L, movewindow, r"
+            "$mod SHIFT, K, movewindow, u"
+            "$mod SHIFT, J, movewindow, d"
+            "$mod, M, fullscreen, 1"
           ]
           ++ (
             # workspaces
