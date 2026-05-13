@@ -20,6 +20,8 @@
       piper
       libratbag
       ungoogled-chromium
+      qbittorrent-enhanced
+      persepolis
     ];
     services.flatpak.packages = [
       "com.github.vikdevelop.photopea_app"
