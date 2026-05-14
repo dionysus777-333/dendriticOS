@@ -13,16 +13,16 @@
       base16Scheme = "${pkgs.base16-schemes}/share/themes/grayscale-dark.yaml";
       fonts = {
         serif = {
-          package = pkgs.dejavu_fonts;
-          name = "DejaVu Serif";
+          package = pkgs.noto-fonts;
+          name = "Noto Serif";
         };
         sansSerif = {
-          package = pkgs.dejavu_fonts;
-          name = "DejaVu Sans";
+          package = pkgs.noto-fonts;
+          name = "Noto Sans";
         };
         monospace = {
-          package = pkgs.nerd-fonts.jetbrains-mono;
-          name = "JetBrainsMono Nerd Font";
+          package = pkgs.noto-fonts;
+          name = "Noto Sans Mono";
         };
           emoji = {
             package = pkgs.noto-fonts-color-emoji;

@@ -29,6 +29,19 @@
       };
     };
 
+    fonts = {
+      fontconfig.defaultFonts = {
+        sansSerif = [ "Noto Sans CJK JP" "Noto Sans" ];
+        serif     = [ "Noto Serif CJK JP" "Noto Serif" ];
+        monospace = [ "Noto Sans Mono CJK JP" "Noto Sans Mono" ];
+      };
+      packages = with pkgs; [
+        noto-fonts
+        noto-fonts-cjk-sans
+        noto-fonts-color-emoji
+        nerd-fonts.symbols-only
+      ];
+    };
     
     imports =
       with inputs.self.modules.nixos;
