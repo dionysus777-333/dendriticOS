@@ -15,33 +15,31 @@
     "d /mnt/usb 0755 root root -"
   ];
 
-  boot.initrd.luks.devices."root".device = "/dev/disk/by-partlabel/cryptroot";
-  boot.initrd.luks.devices."swap" = {
-    device = "/dev/disk/by-partlabel/cryptswap";
+  boot.initrd.luks.devices."enc-pv" = {
+    device = "/dev/disk/by-partlabel/CRYPT";
     preLVM = true;
-    allowDiscards = true;
   };
-
-  fileSystems."/" = { 
-    device = "/dev/mapper/root";
-    fsType = "ext4";
-  };
-
   
-  fileSystems."/boot" = { 
-    device = "/dev/disk/by-label/BOOT";
-    fsType = "vfat";
-    options = [ "fmask=0077" "dmask=0077" ];
-  };
+  fileSystems."/" =
+    { device = "/dev/mapper/vg-root";
+      fsType = "ext4";
+    };
+
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-partlabel/BOOT";
+      fsType = "vfat";
+      options = [ "fmask=0022" "dmask=0022" ];
+    };
+
+  swapDevices =
+    [ { device = "/dev/mapper/vg-swap"; }
+    ];
 
   fileSystems."/data" = {
     device = "/dev/disk/by-label/DATA";
     fsType = "ext4";
   };
   
-  swapDevices = [{ 
-    device = "/dev/mapper/swap";
-  }];
-  
+
 
 }
