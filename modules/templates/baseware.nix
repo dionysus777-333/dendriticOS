@@ -22,6 +22,7 @@
       ungoogled-chromium
       qbittorrent-enhanced
       persepolis
+      vlc
       libreoffice
     ];
     services.flatpak.packages = [
