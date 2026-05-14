@@ -3,7 +3,7 @@
   ...
 }:
 {
-  flake.modules.nixos.yir = { config, ... }: {
+  flake.modules.nixos.caligrun = { config, ... }: {
     imports = [
       self.modules.nixos.user 
     ];

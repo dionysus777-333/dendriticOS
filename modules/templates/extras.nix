@@ -4,7 +4,7 @@
     imports = with inputs.self.modules.nixos; [
       flatpak
     ];
-    environments.systemPackages = with pkgs; [
+    environment.systemPackages = with pkgs; [
       ncspot
       obs-studio
       electrum

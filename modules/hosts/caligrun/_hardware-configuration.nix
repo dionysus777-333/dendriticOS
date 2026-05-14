@@ -34,6 +34,11 @@
     options = [ "fmask=0077" "dmask=0077" ];
   };
 
+  fileSystems."/data" = {
+    device = "/dev/disk/by-label/DATA";
+    fsType = "ext4";
+  };
+  
   swapDevices = [{ 
     device = "/dev/mapper/swap";
   }];
