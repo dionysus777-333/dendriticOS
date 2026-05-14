@@ -22,6 +22,7 @@
       ungoogled-chromium
       qbittorrent-enhanced
       persepolis
+      libreoffice
     ];
     services.flatpak.packages = [
       "com.github.vikdevelop.photopea_app"

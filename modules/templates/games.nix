@@ -4,7 +4,8 @@
     imports = with inputs.self.modules.nixos; [
       steam
       osu
-      retroarch
+      # retroarch
+      # prismLauncher
     ];
   };
 }

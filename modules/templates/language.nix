@@ -2,8 +2,10 @@
 {
   flake.modules.nixos.language = { pkgs, ... }: {
     imports = with inputs.self.modules.nixos; [
-      anki
       fcitx5
+    ];
+    environments.systemPackages = with pkgs; [
+      kdePackages.kiten
     ];
     i18n.inputMethod = {
       type = "fcitx5";
@@ -13,5 +15,10 @@
         fcitx5-gtk
       ];
     };
+  };
+  flake.modules.homeManager.language = {
+    imports = with inputs.self.modules.homeManager; [
+      anki
+    ];
   };
 }

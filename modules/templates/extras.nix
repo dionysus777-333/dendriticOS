@@ -1,16 +1,14 @@
 { inputs, ... }:
 {
-  flake.modules.nixos.extras = {
+  flake.modules.nixos.extras = { pkgs, ... }: {
     imports = with inputs.self.modules.nixos; [
       flatpak
-      spotify
+    ];
+    environments.systemPackages = with pkgs; [
+      ncspot
+      obs-studio
       electrum
       feather
-      kdePackages.kiten
-      libreoffice
-      obs
-      prismlauncher
-      nemo
     ];
     services.flatpak.packages = [
       "org.equicord.equibop"
