@@ -39,6 +39,7 @@
       keepassxc 
       nixvim
       librewolf
+      syncthing
     ];
   };
 }

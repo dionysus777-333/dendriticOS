@@ -29,7 +29,6 @@
         animations = { enabled = false; };
 
         monitor = [
-          ", preferred, auto, auto"
         ];
 
         input = {

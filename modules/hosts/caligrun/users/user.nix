@@ -11,6 +11,11 @@
       imports = with self.modules.homeManager; [
         language
       ];
+      wayland.windowManager.hyprland.settings = {
+        monitor = [
+          "DP-1, 2560x1440@165, auto, auto"
+        ];
+      };
     };
   };
 }
