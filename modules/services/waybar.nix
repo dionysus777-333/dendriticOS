@@ -69,7 +69,7 @@
           "clock" = {
             tooltip-format = "{calendar}";
             format-alt = " {:%a, %m %d %Y}";
-            format = " {:%H:%M}";
+            format = "{:%H:%M}";
           };
 
           "network" = {
