@@ -148,7 +148,6 @@
           "$mod, mouse:273, resizewindow"
         ];
         exec-once = [
-          "sleep 2 && foot -e sh -c 'fastfetch; $SHELL'"
           "waybar &"
           "hypridle"
         ];
