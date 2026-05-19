@@ -92,7 +92,7 @@
             "$mod, W, exec, $browser"
             "$mod, RETURN, exec, $terminal"
             "$mod SHIFT, s, exec, grimblast copy area"
-            "$mod SHIFT, d, exec, loginctl lock-session"
+            "$mod SHIFT, d, exec, loginctl lock-session && sleep 1 && hyprctl dispatch dpms off"
             "$mod, SPACE, exec, $menu"
 
             # Nav
