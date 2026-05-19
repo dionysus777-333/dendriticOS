@@ -15,6 +15,8 @@
       xcbutilrenderutil
       xcbutilwm
       libinput
+      hicolor-icon-theme
+      adwaita-icon-theme
     ];
     services.xserver.enable = true;
     services.libinput.enable = true;
