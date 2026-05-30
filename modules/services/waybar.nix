@@ -12,7 +12,7 @@
         mainBar = {
           layer = "top";
           position = "top";
-          spacing = 5;
+          spacing = 8;
 
           modules-left = [
             "custom/logo"
@@ -47,14 +47,14 @@
 
           "memory" = {
             interval = 5;
-            format = "{}%";
+            format = " {}%";
             # max-length = 10;
             on-click = "foot -e btop";
           };
 
           "cpu" = {
             interval = 5;
-            format = "{}%";
+            format = " {}%";
             states = {
               warning = 70;
               critical = 90;
@@ -69,7 +69,7 @@
           "clock" = {
             tooltip-format = "{calendar}";
             format-alt = " {:%a, %m %d %Y}";
-            format = "{:%H:%M}";
+            format = " {:%H:%M}";
           };
 
           "network" = {
