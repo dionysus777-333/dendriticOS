@@ -13,7 +13,7 @@
       yazi
       kdePackages.dolphin
       kdePackages.kleopatra
-      zathura
+      kdePackages.okular
       zotero
       localsend
       qdirstat
