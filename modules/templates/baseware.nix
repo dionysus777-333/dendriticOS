@@ -24,6 +24,7 @@
       persepolis
       vlc
       libreoffice
+      moonlight-qt
     ];
     services.flatpak.packages = [
       "com.github.vikdevelop.photopea_app"
