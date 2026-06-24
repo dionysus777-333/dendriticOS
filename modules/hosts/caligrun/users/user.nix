@@ -13,7 +13,7 @@
       ];
       wayland.windowManager.hyprland.settings = {
         monitor = [
-          "HDMI-A-1, 2560x1440@165, auto, auto"
+          "HDMI-A-1, 1920x1080@165, auto, auto"
         ];
       };
     };
