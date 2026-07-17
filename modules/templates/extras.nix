@@ -13,6 +13,7 @@
     ];
     services.flatpak.packages = [
       "org.jdownloader.JDownloader"
+      "org.kde.krita"
     ];
     virtualisation.virtualbox.host.enable = true;
     users.extraGroups.vboxusers.members = [ "user" ];
