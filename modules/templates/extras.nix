@@ -15,6 +15,7 @@
       "org.jdownloader.JDownloader"
       "org.kde.krita"
     ];
+    hardware.opentabletdriver.enable = true;
     virtualisation.virtualbox.host.enable = true;
     users.extraGroups.vboxusers.members = [ "user" ];
   };
