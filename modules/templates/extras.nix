@@ -9,7 +9,7 @@
       obs-studio
       electrum
       feather
-      equibop
+      vesktop
     ];
     services.flatpak.packages = [
       "org.jdownloader.JDownloader"
