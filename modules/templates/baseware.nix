@@ -30,7 +30,10 @@
       "com.github.vikdevelop.photopea_app"
     ];
     services.ratbagd.enable = true;
-    services.mullvad-vpn.enable = true;
+    services.mullvad-vpn = {
+      enable = true; 
+      package = pkgs.mullvad-vpn;
+    };
     programs.gnupg.agent.enable = true;
     xdg.mime.defaultApplications = {
       "application/pdf" = "org.pwmt.zathura.desktop";
