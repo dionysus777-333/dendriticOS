@@ -31,6 +31,7 @@
       vlc
       libreoffice
       moonlight-qt
+      distrobox
     ];
     services.flatpak.packages = [
       "com.github.vikdevelop.photopea_app"
@@ -39,6 +40,11 @@
     programs.appimage = {
       enable = true;
       binfmt = true; # Allows you to run AppImages directly with ./file.AppImage
+    };
+    virtualisation.podman = {
+      enable = true;
+      dockerCompat = true;  # Creates a 'docker' alias for podman compatibility
+      defaultNetwork.settings.dns_enabled = true;
     };
     services.ratbagd.enable = true;
     services.mullvad-vpn = {
