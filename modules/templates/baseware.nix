@@ -11,6 +11,12 @@
       evtest
       lact
       yazi
+      cifs-utils
+      samba
+      kdePackages.kio
+      kdePackages.kio-extras
+      kdePackages.kio-fuse
+      kdePackages.kwallet
       kdePackages.dolphin
       kdePackages.kleopatra
       kdePackages.okular
