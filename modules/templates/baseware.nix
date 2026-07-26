@@ -34,7 +34,12 @@
     ];
     services.flatpak.packages = [
       "com.github.vikdevelop.photopea_app"
+      "it.mijorus.gearlever"
     ];
+    programs.appimage = {
+      enable = true;
+      binfmt = true; # Allows you to run AppImages directly with ./file.AppImage
+    };
     services.ratbagd.enable = true;
     services.mullvad-vpn = {
       enable = true; 
