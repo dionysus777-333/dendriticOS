@@ -32,6 +32,7 @@
       libreoffice
       moonlight-qt
       distrobox
+      gajim
     ];
     services.flatpak.packages = [
       "com.github.vikdevelop.photopea_app"
