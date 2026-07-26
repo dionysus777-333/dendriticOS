@@ -10,6 +10,7 @@
       electrum
       feather
       vesktop
+      nicotine-plus
     ];
     services.flatpak.packages = [
       "org.jdownloader.JDownloader"
