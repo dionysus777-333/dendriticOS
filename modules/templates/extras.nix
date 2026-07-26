@@ -4,10 +4,14 @@
     imports = with inputs.self.modules.nixos; [
       flatpak
     ];
+    nixpkgs.config.permittedInsecurePackages = [
+      "python3.13-ecdsa-0.19.1"
+    ];
     environment.systemPackages = with pkgs; [
       ncspot
       obs-studio
       electrum
+      electrum-ltc
       feather
       vesktop
       nicotine-plus
