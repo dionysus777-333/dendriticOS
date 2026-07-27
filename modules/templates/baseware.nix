@@ -16,8 +16,7 @@
       kdePackages.kio
       kdePackages.kio-extras
       kdePackages.kio-fuse
-      kdePackages.kwallet
-      kdePackages.dolphin
+      nautilus
       kdePackages.kleopatra
       kdePackages.okular
       zotero
