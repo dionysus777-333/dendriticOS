@@ -9,6 +9,7 @@
     ];
     environment.systemPackages = with pkgs; [
       ncspot
+      feishin
       obs-studio
       electrum
       electrum-ltc
