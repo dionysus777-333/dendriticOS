@@ -41,6 +41,8 @@
       enable = true;
       binfmt = true; # Allows you to run AppImages directly with ./file.AppImage
     };
+    services.gvfs.enable = true;
+    services.samba-wsdd.enable = true;
     virtualisation.podman = {
       enable = true;
       dockerCompat = true;  # Creates a 'docker' alias for podman compatibility
