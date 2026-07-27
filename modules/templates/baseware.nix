@@ -13,10 +13,10 @@
       yazi
       cifs-utils
       samba
+      nemo
       kdePackages.kio
       kdePackages.kio-extras
       kdePackages.kio-fuse
-      nautilus
       kdePackages.kleopatra
       kdePackages.okular
       zotero
@@ -37,12 +37,11 @@
       "com.github.vikdevelop.photopea_app"
       "it.mijorus.gearlever"
     ];
+    services.gvfs.enable = true;
     programs.appimage = {
       enable = true;
       binfmt = true; # Allows you to run AppImages directly with ./file.AppImage
     };
-    services.gvfs.enable = true;
-    services.samba-wsdd.enable = true;
     virtualisation.podman = {
       enable = true;
       dockerCompat = true;  # Creates a 'docker' alias for podman compatibility
