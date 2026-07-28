@@ -32,10 +32,10 @@
       moonlight-qt
       distrobox
       gajim
+      audacity
     ];
     services.flatpak.packages = [
       "com.github.vikdevelop.photopea_app"
-      "it.mijorus.gearlever"
     ];
     services.gvfs.enable = true;
     programs.appimage = {
