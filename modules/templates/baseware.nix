@@ -37,6 +37,11 @@
     services.flatpak.packages = [
       "com.github.vikdevelop.photopea_app"
     ];
+
+    security.pam.services.greetd.kwallet.enable = false;
+    security.pam.services.login.kwallet.enable = false;
+    security.pam.services.sddm.kwallet.enable = false;
+    
     services.gvfs.enable = true;
     programs.appimage = {
       enable = true;
