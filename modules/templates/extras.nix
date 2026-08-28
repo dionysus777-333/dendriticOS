@@ -19,6 +19,7 @@
     services.flatpak.packages = [
       "org.jdownloader.JDownloader"
       "org.kde.krita"
+      "org.bluej.BlueJ"
     ];
     hardware.opentabletdriver.enable = true;
     virtualisation.virtualbox.host.enable = true;
