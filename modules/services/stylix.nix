@@ -10,7 +10,7 @@
     imports = [ inputs.stylix.nixosModules.stylix ];
     stylix = {
       enable = true;
-      base16Scheme = "${pkgs.base16-schemes}/share/themes/grayscale-dark.yaml";
+      base16Scheme = "${pkgs.base16-schemes}/share/themes/selenized-black.yaml";
       fonts = {
         serif = {
           package = pkgs.noto-fonts;
