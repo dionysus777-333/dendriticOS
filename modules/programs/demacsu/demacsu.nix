@@ -23,6 +23,7 @@
         epkgs.pdf-tools
         epkgs.org-noter
         epkgs.base16-theme
+        epkgs.solarized-theme
       ];
     };
   };
