@@ -33,6 +33,7 @@
       distrobox
       gajim
       audacity
+      graphviz
     ];
     services.flatpak.packages = [
       "com.github.vikdevelop.photopea_app"
