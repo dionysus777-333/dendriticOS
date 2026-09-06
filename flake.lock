@@ -552,7 +552,8 @@
         "nixpkgs": "nixpkgs_3",
         "nixvim": "nixvim",
         "noctalia": "noctalia",
-        "stylix": "stylix"
+        "stylix": "stylix",
+        "whatisit": "whatisit"
       }
     },
     "stylix": {
@@ -729,6 +730,26 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "whatisit": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1788470187,
+        "narHash": "sha256-5/NxMHBEPCaqVYuhCseBcL6w9SOomx0n+vQdUfBB0zk=",
+        "owner": "ThorOdinson246",
+        "repo": "whatisit-nl2sh",
+        "rev": "f9c3e79e3332f0b2398188381b6d744bb3c0ab37",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ThorOdinson246",
+        "repo": "whatisit-nl2sh",
         "type": "github"
       }
     },

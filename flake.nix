@@ -24,5 +24,9 @@
     };
     noctalia.url = "github:noctalia-dev/noctalia-shell";
     stylix.url = "github:nix-community/stylix";
+    whatisit = {
+      url = "github:ThorOdinson246/whatisit-nl2sh";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 }

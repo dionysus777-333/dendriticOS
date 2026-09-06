@@ -3,6 +3,7 @@
   flake.modules.nixos.baseware = { pkgs, ... }: {
     imports = with inputs.self.modules.nixos; [
       flatpak
+      whatisit
     ];
     environment.systemPackages = with pkgs; [
       alsa-utils
