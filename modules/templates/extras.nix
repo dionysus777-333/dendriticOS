@@ -15,6 +15,7 @@
       feather
       nicotine-plus
       legcord
+      sonobus
     ];
     services.flatpak.packages = [
       "org.jdownloader.JDownloader"
