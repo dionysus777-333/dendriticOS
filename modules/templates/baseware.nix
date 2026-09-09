@@ -36,6 +36,7 @@
       audacity
       graphviz
       smartmontools
+      peazip
     ];
     services.flatpak.packages = [
       "com.github.vikdevelop.photopea_app"
