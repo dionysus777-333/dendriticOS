@@ -35,6 +35,7 @@
       gajim
       audacity
       graphviz
+      smartmontools
     ];
     services.flatpak.packages = [
       "com.github.vikdevelop.photopea_app"
