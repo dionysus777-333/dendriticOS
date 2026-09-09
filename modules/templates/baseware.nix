@@ -37,6 +37,7 @@
       graphviz
       smartmontools
       peazip
+      mousepad
     ];
     services.flatpak.packages = [
       "com.github.vikdevelop.photopea_app"
