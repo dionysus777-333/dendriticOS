@@ -14,8 +14,8 @@
       electrum-ltc
       feather
       nicotine-plus
-      legcord
       sonobus
+      vesktop
     ];
     services.flatpak.packages = [
       "org.jdownloader.JDownloader"
