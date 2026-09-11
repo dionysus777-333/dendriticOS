@@ -38,6 +38,8 @@
       smartmontools
       peazip
       mousepad
+      session-desktop
+      oniux
     ];
     services.flatpak.packages = [
       "com.github.vikdevelop.photopea_app"
