@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, lib, ... }:
 {
   flake.modules.nixos.language = { pkgs, ... }: {
     imports = with inputs.self.modules.nixos; [
@@ -14,9 +14,16 @@
       fcitx5
     ];
     wayland.windowManager.hyprland.settings = {
-      exec-once = [
-        "fcitx5"
-      ];
+      on = {
+        _args = [
+          "hyprland.start"
+          (lib.generators.mkLuaInline ''
+            function()
+              hl.exec_cmd("fcitx5")
+            end
+          '')
+        ];
+      };
     };
   };
 }

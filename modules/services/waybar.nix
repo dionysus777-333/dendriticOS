@@ -45,6 +45,10 @@
           #   max-length = 50;
           # };
 
+          "hyprland/workspaces" = {
+            on-click = "activate";
+          };
+
           "memory" = {
             interval = 5;
             format = " {}%";

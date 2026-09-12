@@ -12,9 +12,9 @@
         language
       ];
       wayland.windowManager.hyprland.settings = {
-        monitor = [
-          "HDMI-A-1, 2560x1440@165, auto, auto"
-        ];
+        monitor = {
+          output = ""; mode = "preferred"; position = "auto"; scale = "auto";
+        };
       };
     };
   };
