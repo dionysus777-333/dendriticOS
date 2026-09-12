@@ -62,7 +62,7 @@
     services.ratbagd.enable = true;
     services.mullvad-vpn = {
       enable = true; 
-      package = pkgs.mullvad-vpn;
+      gui.enable = true;
     };
     programs.gnupg.agent.enable = true;
     xdg.mime.defaultApplications = {

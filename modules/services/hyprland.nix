@@ -1,3 +1,4 @@
+{ inputs, ... }:
 {
   flake.modules.homeManager.hyprland = { pkgs, ... }: {
     home.packages = with pkgs; [ brightnessctl ];
@@ -7,10 +8,10 @@
       systemd.enable = true;
       settings = {
         # Variables
-        "$mod" = "SUPER";
-        "$terminal" = "foot";
-        "$menu" = "fuzzel";
-        "$browser" = "librewolf";
+        "mod" = "SUPER";
+        "terminal" = "foot";
+        "menu" = "fuzzel";
+        "browser" = "librewolf";
 
         # env = [
         #   "XCURSOR_THEME,Vanilla-DMZ"

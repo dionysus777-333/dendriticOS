@@ -5,13 +5,13 @@
       flatpak
     ];
     nixpkgs.config.permittedInsecurePackages = [
-      "python3.13-ecdsa-0.19.1"
+      "python3.14-ecdsa-0.19.2"
     ];
     environment.systemPackages = with pkgs; [
       feishin
       obs-studio
       electrum
-      electrum-ltc
+      #electrum-ltc
       feather
       nicotine-plus
       sonobus

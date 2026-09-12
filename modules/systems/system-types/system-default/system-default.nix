@@ -11,8 +11,11 @@
     # Headful stuff
     services.power-profiles-daemon.enable = true;
     services.upower.enable = true;
-    xdg.portal.enable = true;
-    xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    xdg.portal = {
+      enable = true;
+      extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+      config.common.default = "*";
+    };
     
     virtualisation.vmVariant = {
       # following configuration is added only when building VM with build-vm

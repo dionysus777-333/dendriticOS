@@ -12,7 +12,7 @@
   # System-level package module
   flake.modules.nixos.whatisit = { pkgs, ... }: {
     environment.systemPackages = [
-      inputs.whatisit.packages.${pkgs.system}.default
+      inputs.whatisit.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
   };
 }
