@@ -13,7 +13,7 @@
       ];
       wayland.windowManager.hyprland.settings = {
         monitor = {
-          output = ""; mode = "preferred"; position = "auto"; scale = "auto";
+          output = "DP-1"; mode = "2560x1440@165"; position = "auto"; scale = "auto";
         };
       };
     };
