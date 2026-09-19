@@ -107,13 +107,7 @@
           #
           # Variables
           #
-          # These become Lua locals:
-          #
-          # local mod = "SUPER"
-          # local terminal = "foot"
-          # local menu = "fuzzel"
-          # local browser = "librewolf"
-          #
+ 
           mod = {
             _var = mod;
           };
@@ -168,6 +162,13 @@
 
           gesture = {
             fingers = 3; direction = "horizontal"; action = "workspace";
+          };
+
+          #
+          # Monitor
+          #
+          monitor = lib.mkDefault {
+            output = ""; mode = "preferred"; position = "auto"; scale = "auto";
           };
 
           #
