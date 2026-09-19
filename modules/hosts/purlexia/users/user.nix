@@ -9,8 +9,11 @@
     ];
     home-manager.users.user = {
       wayland.windowManager.hyprland.settings = {
-        device = [
-        ];
+        device = {
+          name = "elan0676:00-04f3:3195-touchpad";
+          accel_profile = "adaptive";
+          sensitivity = 0.0;
+        };
       };
     };
   };
