@@ -6,6 +6,7 @@
       whatisit
     ];
     environment.systemPackages = with pkgs; [
+      parted
       alsa-utils
       keyutils
       qimgv
@@ -44,6 +45,7 @@
     ];
     services.flatpak.packages = [
       "com.github.vikdevelop.photopea_app"
+      "com.logseq.Logseq"
     ];
 
     security.pam.services.greetd.kwallet.enable = false;

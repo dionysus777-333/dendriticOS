@@ -3,6 +3,7 @@
   flake.modules.nixos.extras = { pkgs, ... }: {
     imports = with inputs.self.modules.nixos; [
       flatpak
+      electrum-ltc
     ];
     nixpkgs.config.permittedInsecurePackages = [
       #"python3.14-ecdsa-0.19.2"
@@ -10,8 +11,7 @@
     environment.systemPackages = with pkgs; [
       feishin
       obs-studio
-      electrum
-      #electrum-ltc
+      sparrow
       feather
       nicotine-plus
       sonobus
