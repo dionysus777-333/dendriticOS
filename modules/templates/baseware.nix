@@ -39,6 +39,7 @@
       peazip
       mousepad
       session-desktop
+      signal-desktop
       oniux
     ];
     services.flatpak.packages = [
