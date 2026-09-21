@@ -8,6 +8,7 @@
     programs.doom-emacs = {
       enable = true;
       doomDir = ./doom.d;
+      emacs = pkgs.emacs-pgtk;
       extraPackages = epkgs: [ 
         epkgs.org-roam 
         epkgs.org-roam-ui

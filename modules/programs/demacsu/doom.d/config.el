@@ -44,8 +44,8 @@
 ;; ==========================================
 
 (after! org-roam
-  (setq org-roam-directory "~/general-st/org-roam")
-  (setq org-roam-db-location "~/general-st/org-roam/org-roam.db")
+  (setq org-roam-directory "~/org-roam")
+  (setq org-roam-db-location "~/org-roam/org-roam.db")
   
   ;; Load the extra Roam packages you bundled via Nix
   (require 'org-roam-timestamps)
@@ -55,7 +55,7 @@
   (org-roam-bibtex-mode))
 
 (after! org-id
-  (setq org-id-locations-file "~/general-st/org-roam/.orgids"))
+  (setq org-id-locations-file "~/org-roam/.orgids"))
 
 ;; Configure org-roam-ui (Visual Browser Graph)
 (use-package! org-roam-ui
