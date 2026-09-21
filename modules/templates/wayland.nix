@@ -13,6 +13,11 @@
       QT_QPA_PLATFORM = "wayland;xcb";
     };
     security.pam.services.swaylock = {};
+
+    environment.sessionVariables = {
+      NIXOS_OZONE_WL = "1";
+    };
+    
   };
   flake.modules.homeManager.wayland = {
     imports = with inputs.self.modules.homeManager; [
