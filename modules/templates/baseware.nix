@@ -42,6 +42,8 @@
       session-desktop
       signal-desktop
       oniux
+      yubikey-manager
+      yubikey-personalization
     ];
     services.flatpak.packages = [
       "com.github.vikdevelop.photopea_app"

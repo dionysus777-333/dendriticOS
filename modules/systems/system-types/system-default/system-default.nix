@@ -7,6 +7,10 @@
 
   flake.modules.nixos.system-default = { pkgs, lib, ... }: {
     hardware.bluetooth.enable = true;
+
+    # Yubikey stuff
+    services.udev.packages = [ pkgs.yubikey-personalization ];
+    services.pcscd.enable = true;
     
     # Headful stuff
     services.power-profiles-daemon.enable = true;
