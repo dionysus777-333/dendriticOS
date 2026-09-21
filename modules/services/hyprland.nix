@@ -171,6 +171,10 @@
             output = ""; mode = "preferred"; position = "auto"; scale = "auto";
           };
 
+          config.xwayland = {
+            force_zero_scaling = true;
+          };
+
           #
           # General
           #
