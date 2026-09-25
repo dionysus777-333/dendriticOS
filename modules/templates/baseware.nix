@@ -44,6 +44,7 @@
       oniux
       yubikey-manager
       yubikey-personalization
+      firefox
     ];
     services.flatpak.packages = [
       "com.github.vikdevelop.photopea_app"
