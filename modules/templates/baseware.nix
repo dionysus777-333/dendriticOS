@@ -45,11 +45,11 @@
       yubikey-manager
       yubikey-personalization
       firefox
-      openshot-qt
     ];
     services.flatpak.packages = [
       "com.github.vikdevelop.photopea_app"
       "com.logseq.Logseq"
+      "org.openshot.OpenShot"
     ];
 
     security.pam.services.greetd.kwallet.enable = false;
