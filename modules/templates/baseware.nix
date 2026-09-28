@@ -45,6 +45,7 @@
       yubikey-manager
       yubikey-personalization
       firefox
+      openshot-qt
     ];
     services.flatpak.packages = [
       "com.github.vikdevelop.photopea_app"
