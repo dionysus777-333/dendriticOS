@@ -16,7 +16,6 @@
       nicotine-plus
       sonobus
       vesktop
-      musescore
       drawpile
     ];
     services.flatpak.packages = [
