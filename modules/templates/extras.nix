@@ -16,6 +16,8 @@
       nicotine-plus
       sonobus
       vesktop
+      musescore
+      drawpile
     ];
     services.flatpak.packages = [
       "org.jdownloader.JDownloader"
