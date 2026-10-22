@@ -17,6 +17,7 @@
       sonobus
       vesktop
       drawpile
+      kicad
     ];
     services.flatpak.packages = [
       "org.jdownloader.JDownloader"
